@@ -18,8 +18,8 @@ def get_text_chunks(text):
     # Ensure the text is split into manageable chunks to avoid hitting model limits.
     text_splitter = CharacterTextSplitter(
         separator="\n",
-        chunk_size=400,
-        chunk_overlap=100,
+        chunk_size=1000,
+        chunk_overlap=200,
         length_function=len
     )
     chunks = text_splitter.split_text(text)
@@ -37,7 +37,7 @@ def get_vectorstore(text_chunks):
 def get_conversation_chain(vectorstore):
     # Switch from OpenAI to HuggingFace model for LLM.
     # llm = ChatOpenAI()  # Commented out: Used if you want to switch to OpenAI's model.
-    llm = HuggingFaceHub(repo_id="google/flan-t5-base",huggingfacehub_api_token="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", model_kwargs={"temperature": 0.5, "max_length": 512})
+    llm = HuggingFaceHub(repo_id="google/flan-t5-large",huggingfacehub_api_token="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", model_kwargs={"temperature": 0.5, "max_length": 512})
 
     # Memory object to keep track of conversation history.
     memory = ConversationBufferMemory(
