@@ -1,0 +1,198 @@
+THIS AGREEMENT CONTAINS A BINDING ARBITRATION PROVISION THAT MAY BE ENFORCED BY THE PARTIES.
+
+IN WITNESS WHEREOF, the undersigned have executed this Agreement by their duly authorized officers, intending to be
+legally bound hereby.
+
+HiLabs Health Management Inc, ABC Hospital
+Signature: =a Signature:
+Name: ABC Person Name: ABC Person
+Title: CEO, HiLabs Health Plan Title: Associate
+Date: Feb 10, 2021 Date: _Feb 10, 2021
+TIN: __999999999
+ABC Care, Inc
+Signature:
+Name:
+Title, CEO
+Date: Feb 10, 2021
+Higabs Health Management, Inc. ABC Hospital
+and Affiliates .
+219 ABC 2°4 Street adores, ABS,
+ABXC MN 55401 Attn: sity. State:XYZ
+
+Legal Department
+
+10
+
+EXHIBIT 2
+
+BENEFIT PLANS
+
+Facility will participate in Hilabs Health’s network for the following types of Benefit Plans:
+
+Commercial Benefit Plans: Benefit Plans issued or administered by Bright Health that are designed for purchase by individuals
+or groups andare not intended for government health programs such as Medicare, Medicaid, or the Children’s Health Insurance
+Program. Commercial Benefit Plans include without limitation:
+
+a. Individual and Family Plans (IFP). IFP Benefit Plans include:
+
+i, Off-Exchange Benefit Plans: benefit plans that are eligible for sale in commercial individual
+and group markets; and
+
+ii. Exchange Benefit Plans: subsidized and unsubsidized benefit plans sold on the state and
+federal health insurance marketplaces established under the Affordable Care Act (“ACA”) or sold through
+other channels created by subsequent legislation at the state or federal level intended to replace the ACA
+marketplaces.
+
+b. Limited Benefit Plans: Bright Secure and other indemnity coverage, short term limited duration, or other types
+of limited benefit plan.
+
+c. Association Health Plans: coverage offered to members of an association with which Bright Health contracts
+to provide health care coverage pursuant to applicable Federal Department of Labor and State regulations.
+
+Medicare Advantage Benefit Plans: Benefit Plans issued or administered by Bright Health pursuant to the Medicare Advantage
+program.
+
+Bright Health may update the foregoing list of Benefit Plans types by providing Facility with ninety (90) days advance written
+notice prior to the to the effective date of such change via a mutually signed amendment agreed to by both parties.
+
+13
+
+EXHIBIT 4A
+
+FACILITY PAYMENT APPENDIX FOR COMMERCIAL BENEFIT PLANS
+
+Effective Date: January 1, 2021
+Line of Business: Commercial Benefit Plans
+
+Contract Rates: Bright agrees to pay Care Partner or Network Provider the lesser of Care Partner's or Network
+Provider's billed charges or the rates set forth within this Payment Appendix, less Member Expenses.
+
+Category
+All Inpatient Services
+
+Payment Methodology
+Percent of the Current Medicare
+Fee Schedule for !npatient
+
+Prospective Payment System
+
+All MS-DRG's 185%
+
+Updates to MS-DRG Weights: Notwithstanding anything herein to the contrary, CMS MS DRG Weights will be updated annually.
+
+Priority Ranking: Payment for services is based on the highest "Priority Ranking" set forth above. !f a claim contains
+revenue/CPT codes from multiple outpatient service categories, reimbursement for such claims will be calculated using the
+highest Priority Ranking methodology with no additional payment for lower Priority Ranking service(s).
+Medicare Fee Schedule: means the reimbursement that the provider would receive if the services were performed in the
+Medicare fee for service program in the same Medicare Locality, including both reimbursement rules and reimbursement rates
+in effect for the services except for the following:
+
+a) the prevailing Medicare sequestration reduction imposed by the Budget Control Act of 2011 will not be applied when
+determining reimbursement rates under this Payment Appendix.
+
+b) for Network Providers who participate in the Merit-based Incentive Payment System, in Alternative Payment Models,
+or in other CMS performance-based payment programs; bonuses, penalties, or other adjustments applied to Facility
+reimbursement by CMS in original Medicare will not be included by Bright Health in the Medicare Fee Schedule.
+
+c) The prevailing CMS payment rules for original Medicare for HACs and Serious Reportable Events. Bright Health will
+reduce payment for those portions of the claims that are attribute to HACs and Serious Reportable Events in
+accordance with CMS’ payment rules under the Deficit Reduction Act of 2005 and Section 3008 of the Affordable Care
+Act.
+
+Medicare Fee Schedule Updates: The reimbursement will be at current Medicare Fee Schedule. The Medicare Fee Schedule
+will be updated within ninety (90) days of CMS publication of changes. In the event updates are made prior to the effective date
+of the updated Medicare fee schedule; the fee schedule effective date shall prevail. Claims incurred with dates of service prior
+to such fee schedule updates will not be reprocessed and will be reimbursed based on the rates in effect prior to such update.
+
+Alternative Reimbursement: In the event a Covered Service is valued by Medicare but excluded from the specific Medicare
+Fee Schedule(s) listed in this fee appendix, the reimbursement amount for such Covered Service shall be equal to the lowest
+numeric percentage listed in this fee appendix of the applicable prevailing year's Medicare Fee Schedule, less Member
+Expenses.
+
+New and Non-Medicare Valued Codes: Reimbursement for new codes shall be determined using the current RVUs at the time
+the new codes are added with the current locality and conversion factors until the next Medicare Fee Schedule Update. For
+codes that are not valued by applicable Medicare Fee Schedules, reimbursement for Covered Services shall be the lesser of
+Care Partner’s or Network Provider's billed charges or the Bright Health Plan Fee Schedule. Bright Health may update the Bright
+Health Plan Fee Schedule rates from time to time. In the event a code is not valued by Medicare Fee Schedules or the Bright
+Health Plan Fee Schedule, reimbursement shall be 25% of Care Partner’s or Network Provider's billed charges.
+
+Readmissions: In the event a member requires hospitalization by Care Partner or Network Provider, or another facility that is
+a provider affiliate, within thirty (30) days of discharge from a prior hospitalization or within thirty (30) days of the date of service
+for an outpatient procedure, and Bright Health determines that the hospitalization was for treatment of complications or avoidable
+detrimental consequences of the prior hospitalization or outpatient procedure, Bright Health will not reimburse Network Provider
+
+15
+
+EXHIBIT 4B
+
+FACILITY PAYMENT APPENDIX FOR MEDICARE ADVANTAGE BENEFIT PLANS
+
+Effective Date: January 1, 2021
+
+Line of Business: Medicare Advantage Plans
+Contract Rates: Bright agrees to pay Care Partner or Network Provider in the lesser of Care Partner's or Network
+i i h: ie rates set fo! ithin this Pa A ix, less Member n:
+
+PL ree
+Care Partner or Network Provider shall be reimbursed at 102% of the Prevailing Medicare Fee Schedule for Acute
+Inpatient Prospective Payment System. All inpatient Hospital Services with a non- codable Medicare DRG will be
+teimbursed at fifty percent (60%) of Hospital's billed charges, not to exceed $3,500 per day.
+
+Care Partner or Network Provider shall be reimbursed at 102% of the Prevailing Medicare Fee Schedule for
+Outpatient P tive P: t Syst
+
+annually.
+Prevailing Medicare Fee Schedule: means the reimbursement that the provider would receive if the services were performed
+
+in the Medicare fee for service program in the same locality, including both reimbursement rules and reimbursement rates in
+effect for the services. For the purposes of the Prevailing Medicare Fee Schedule, among the other applicable Medicare
+reimbursement rules, Bright Health will apply the following:
+
+(a) The prevailing Medicare sequestration reduction imposed by the Budget Control Act of 2011, as amended, for services
+provided by ACO to Members under Medicare Advantage Benefit Plans. Such sequestration reduction will be applied
+at the same level and methodology as if the reimbursement were made in original Medicare.
+
+(b) For Network Providers who participate in the Merit-based Incentive Payment System, in Alternative Payment Models,
+or in other CMS performance-based payment programs; bonuses, penalties, or other adjustments applied to Facility
+or individual Network Provider reimbursements by CMS in original Medicare will not be included by Bright Health in
+the Prevailing Medicare Fee Schedule.
+
+(c) The prevailing CMS payment rules for original Medicare for HACs and Serious Reportable Events. Bright Health will
+reduce payment for those portions of the claims that are attribute to HACs and Serious Reportable Events in
+accordance with CMS’ payment rules under the Deficit Reduction Act of 2005 and Section 3008 of the Affordable Care
+Act.
+
+Prevailing Medicare Fee-Schedule Updates: The Prevailing Medicare Fee Schedule will be updated within ninety (90) days
+of the CMS publication of changes. Claims incurred with dates of service prior to such updates will not be reprocessed and will
+be reimbursed based on the rates in effect prior to such update.
+
+Alternative Reimbursement: In the event a Covered Service is valued by Medicare but excluded from the specific Medicare
+Fee Schedule(s) listed in this fee appendix, the reimbursement amount for such Covered Service shall be equal to the lowest
+numeric percentage listed in this fee appendix of the applicable prevailing year’s Medicare Fee Schedule, less Member
+Expenses.
+
+New and Non-Medicare Valued Codes: Reimbursement for new codes shall be determined using the current RVUs at the time
+the new codes are added with the current locality and conversion factors until the next Medicare Fee Schedule Update. For
+codes that are not valued by applicable Medicare Fee Schedules, reimbursement for Covered Services shall be the lesser of
+Care Partner’s or Network Provider's billed charges or the Bright HealthPlan Fee Schedule. Bright Health may update the Bright
+Health Plan Fee Schedule rates from time to time. In the event a code is not valued by Medicare or the Bright Health Plan Fee
+Schedule, reimbursement shall be 30% of Care Partner or Network Provider's billed charges.
+
+Readmissions: |n the event a member requires hospitalization by Care Partner or Network Provider, or another facility that is
+a provider affiliate, within thirty (30) days of discharge from a prior hospitalization or within thirty (30) days of the date of service
+for an outpatient procedure, claims will be reimbursed in accordance with CMS guidelines and methodologies in effect on the
+date of service. Network Provider, or another facility that is a provider affiliate, further agrees not to reject any patient transfers
+from a non-participating facility or provider, if the Network Provider is the originating admitting care provider/facility.
+
+Charge Master Increase: Care Partner is limited to annual charge master increases for those Covered Services provided to
+Members and paid by Bright at the percent of Care Partner's billed charges not to exceed seven percent (7%) during any twelve
+(12) month period occurring after the contract effective date. Care Partner will provide Bright written notice of any increase in
+Care Partner's charge master thirty (30) days prior to the effective date of such increase via a certified letter signed by the Chief
+Financial Officer or other authorized officer of the Care Partner. Bright may also request from Care Partner up to twice each
+year, and Care Partner will furnish to Bright in an electronic format acceptable to Bright, Care Partner's prior year charge master
+with effective date(s) and current year charge master with effective date(s). Charge master files will contain industry standard
+and legally mandated compliant coding as well as rates. If Charge Master Increase exceeds seven percent (7%), applicable
+tates will be adjusted to neutralize impact above seven percent (7%).
+
+17
+
