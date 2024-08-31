@@ -11,8 +11,11 @@ from langchain.llms import HuggingFaceHub
 from huggingface_hub import login
 from extractor import extract_text_from_pdf_images
 from sentence_transformers import SentenceTransformer
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+import os
 # Bug: API key should not be hardcoded directly in the code. Use environment variables or Streamlit's secrets management instead.
-login("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")
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 def get_text_chunks(text):
     # Ensure the text is split into manageable chunks to avoid hitting model limits.
@@ -28,7 +31,7 @@ def get_text_chunks(text):
 def get_vectorstore(text_chunks):
     # Embedding selection based on your preference for better model performance.
     # embeddings = OpenAIEmbeddings()  # Commented out: Only needed if you decide to use OpenAI's embeddings.
-    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    embeddings = HuggingFaceEmbeddings()
     
     # FAISS vector store creation for efficient similarity search.
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
@@ -37,7 +40,7 @@ def get_vectorstore(text_chunks):
 def get_conversation_chain(vectorstore):
     # Switch from OpenAI to HuggingFace model for LLM.
     # llm = ChatOpenAI()  # Commented out: Used if you want to switch to OpenAI's model.
-    llm = HuggingFaceHub(repo_id="google/flan-t5-large",huggingfacehub_api_token="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", model_kwargs={"temperature": 0.5, "max_length": 512})
+    llm = HuggingFaceHub(repo_id="google-t5/t5-large", model_kwargs={"temperature": 0.5, "max_length": 1024})
 
     # Memory object to keep track of conversation history.
     memory = ConversationBufferMemory(
