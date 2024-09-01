@@ -47,21 +47,25 @@ The processed data, including text chunks and their embeddings, are stored in th
 When the user submits a question, it is first checked to ensure that the question is provided and that the knowledge base is initialized. If these conditions are met, the question is added to the chat history.
 2.	**Processing the Query:**
 A loading spinner indicates that the system is processing the request. The user’s question is used to search the knowledge base for relevant information. The knowledge base contains embeddings of text chunks extracted from the PDF, enabling quick similarity searches.
-3.	**Finding Relevant Documents:**
-The system retrieves the top 3 documents from the knowledge base that are most similar to the user’s question. These documents are concatenated to form a context that provides relevant information for answering the question.
-4.	**Cleaning and Preparing the Context:**
+3.	**Finding Relevant Documents:** 
+The system retrieves the top 3 documents from the knowledge base that are most similar to the user’s question using L2 distance. These documents are concatenated to form a context that provides relevant information for answering the question.
+$$
+d(P, Q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^2}
+$$
+5.	**Cleaning and Preparing the Context:**
 The context obtained from the retrieved documents is cleaned to remove irrelevant text. The cleaned context is combined with the user’s question to create a coherent input for the answer generation model.
-5.	**Generating an Answer:**
+6.	**Generating an Answer:**
 The combined context and question are processed by a pre-trained model, such as “T5-large,” a transformer-based model designed for generating human-like text. The model produces an answer based on the provided context and question.
-6.	**Updating the Chat History:**
+7.	**Updating the Chat History:**
 The generated answer is added to the chat history, reflecting the interaction between the user’s question and the system’s response. This allows users to see the conversation flow.
-7.	**Displaying the Conversation:**
+8.	**Displaying the Conversation:**
 The chat history is displayed with a clear distinction between user messages and bot responses. User messages are aligned to the right, and bot responses are aligned to the left, ensuring a readable and organized conversation.
 
 ### 4. Threshold-based Similarity Filtering
 1. When a user asks a question, the system searches through the stored knowledge to find chunks of text that are similar to the question. The similarity_search_with_score function not only retrieves these chunks but also provides a similarity score for each one. This score represents how closely each chunk matches the user’s question.
 
 2. In this process, the system loops through the retrieved chunks and checks their scores against a pre-defined threshold . If a chunk’s score meets this threshold, it’s considered relevant and added to the context variable. If none of the chunks have scores above the threshold, the system concludes that there’s “No match” for the query.
+
 
 ## Setup
 
@@ -82,7 +86,7 @@ python -m venv chat
 ```
 .\chat\Scripts\activate
 ```
-5. Activate the envirnment for Windows
+5. Activate the envirnment for Mac
 ```
 source chat/bin/activate
 ```
