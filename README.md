@@ -11,6 +11,9 @@ This application provides a interface for querying a pdf file smartly .It perfor
 ![alt text](assets/image.png)
 
 
+
+
+
 ## Setup
 
 Ensure you have latest version of python installed (python=3.9.19).
