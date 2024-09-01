@@ -10,8 +10,6 @@ This application provides a interface for querying a pdf file smartly .It perfor
 
 ### 1. Extracting the text from pdf files
 
-## 1. Convert PDF to Images
-
 1.	Convert PDF Pages to Images:
 First, we take the PDF file and convert each of its pages into images. This is done because PDFs are composed of text and graphics that we need to interpret as images for further processing. This step involves reading the entire PDF file and generating an image for each page.
 2.	Prepare Images for Text Extraction:
