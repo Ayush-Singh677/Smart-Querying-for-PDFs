@@ -3,7 +3,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from extractor import extract_text_from_pdf_images
+from extractor import extract_text_from_pdf
 import re
 
 # Clean extracted text function
@@ -33,7 +33,7 @@ def main():
     if uploaded_pdf and st.sidebar.button("Process PDF"):
         with st.spinner("PDF is processing..."):
             try:
-                text = extract_text_from_pdf_images(uploaded_pdf)
+                text = extract_text_from_pdf(uploaded_pdf)
             except Exception as e:
                 st.error(f"Error processing PDF: {e}")
                 return

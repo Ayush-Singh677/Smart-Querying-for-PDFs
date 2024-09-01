@@ -1,39 +1,29 @@
 import pytesseract
 from PIL import Image
 import cv2
-from pdf2image import convert_from_path
-import os
+from pdf2image import convert_from_bytes
+import numpy as np
 
-# Convert PDF to images
-def convert_pdf_to_images(pdf_path):
-    images = convert_from_path(pdf_path)
-    image_paths = []
-    for i, image in enumerate(images):
-        image_path = f"page_{i+1}.png"
-        image.save(image_path, 'PNG')
-        image_paths.append(image_path)
-    return image_paths
+def convert_pdf_to_images(pdf_file):
+    images = convert_from_bytes(pdf_file.read())
+    return images
 
-# Preprocess the image for better OCR accuracy
-def preprocess_image(image_path):
-    image = cv2.imread(image_path)
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # Apply thresholding
+def preprocess_image(image):
+    open_cv_image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+    gray = cv2.cvtColor(open_cv_image, cv2.COLOR_BGR2GRAY)
     _, binary_image = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)
     return binary_image
 
-# Apply OCR on the image
-def extract_text_from_image(image_path):
-    preprocessed_image = preprocess_image(image_path)
-    text = pytesseract.image_to_string(preprocessed_image)
+def extract_text_from_image(image):
+    preprocessed_image = preprocess_image(image)
+    pil_image = Image.fromarray(preprocessed_image)
+    text = pytesseract.image_to_string(pil_image)
     return text
 
-# Process the PDF and extract text from each page
-def extract_text_from_pdf(pdf_path):
-    image_paths = convert_pdf_to_images(pdf_path)
+def extract_text_from_pdf(pdf_file):
+    images = convert_pdf_to_images(pdf_file)
     full_text = ""
-    for image_path in image_paths:
-        text = extract_text_from_image(image_path)
+    for image in images:
+        text = extract_text_from_image(image)
         full_text += text + "\n"
-        os.remove(image_path)  # Clean up the image files after processing
     return full_text
