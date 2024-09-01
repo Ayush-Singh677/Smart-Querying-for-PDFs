@@ -13,7 +13,7 @@ This application provides a interface for querying a pdf file smartly .It perfor
 
 ## Setup
 
-Ensure you have latest version of python installed.
+Ensure you have latest version of python installed (python=3.9.19).
 
 1. Install all the required libraries.
 ```
@@ -29,3 +29,6 @@ python3 download_models.py
 ```
 streamlit run app.py
 ```
+## Resources 
+```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/>
+```sentence-transformers/all-mpnet-base-v2``` - <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">Hugging Face<a/>
