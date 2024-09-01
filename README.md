@@ -25,10 +25,12 @@ pip install -r requirements.txt
 python3 download_models.py
 ```
 
-3. Run the streamlit app
+3. Run the streamlit app.
 ```
 streamlit run app.py
 ```
+4. Upload the pdf file and ask your question.
+   ![alt text](assets/frontend.png)
 ## Resources 
 ```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/> <br>
 ```sentence-transformers/all-mpnet-base-v2``` - <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">Hugging Face<a/>
