@@ -54,6 +54,8 @@ $$
 d(P, Q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^2}
 $$
 
+Where P and Q are two n dimensional vector.
+
 5.	**Cleaning and Preparing the Context:**
 The context obtained from the retrieved documents is cleaned to remove irrelevant text. The cleaned context is combined with the user’s question to create a coherent input for the answer generation model.
 6.	**Generating an Answer:**
