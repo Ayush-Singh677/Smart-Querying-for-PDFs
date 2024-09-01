@@ -11,13 +11,20 @@ This application provides a interface for querying a pdf file smartly .It perfor
 ### 1. Extracting the text from pdf files
 
 1.	Convert PDF Pages to Images:
-First, we take the PDF file and convert each of its pages into images. This is done because PDFs are composed of text and graphics that we need to interpret as images for further processing. This step involves reading the entire PDF file and generating an image for each page.
+First, we take the PDF file and convert each of its pages into images. This is done because PDFs are composed of scanned images that we need to interpret as text for further processing. This step involves reading the entire PDF file and generating an image for each page to extract text.
 2.	Prepare Images for Text Extraction:
-Once we have the images of the PDF pages, the next step is to enhance these images to make it easier for OCR to accurately recognize the text. To do this, we convert the images into grayscale. Grayscale images help simplify the data by removing color information, which can reduce noise and focus on the text.
-After converting to grayscale, we apply a technique called thresholding. This technique transforms the grayscale image into a binary image where the text appears in high contrast against the background. This makes the text more distinct and easier for OCR to detect.
-3.	Perform Optical Character Recognition (OCR):
+Once we have the images of the PDF pages, the next step is to preprocess these images to make it easier for OCR to accurately recognize the text. 
+We apply a technique called thresholding. This technique transforms the image into a binary image where the text appears in high contrast against the background. This makes the text more distinct and easier for OCR to detect. 
+
+ T(x, y) =
+\begin{cases}
+255 & \text{if } I(x, y) \geq T \\
+0 & \text{if } I(x, y) < T
+\end{cases} 
+
+4.	Perform Optical Character Recognition (OCR):
 With the preprocessed images ready, we use OCR technology to read and extract the text from each image. OCR works by analyzing the patterns in the image and converting them into readable text. The OCR engine examines the binary image and identifies characters and words.
-4.	Combine Text from All Pages:
+5.	Combine Text from All Pages:
 After extracting text from each image, we compile the text from all pages into a single cohesive text. This means that if the PDF has multiple pages, the text extracted from each page is collected and combined into one large text block, maintaining the content and flow of the original document.
 
 
