@@ -29,7 +29,7 @@ python3 download_models.py
 ```
 streamlit run app.py
 ```
-4. Upload the pdf file and ask your question.
+4. Upload the pdf file and ask your question.<br>
    ![alt text](assets/frontend.png)
 ## Resources 
 ```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/> <br>
