@@ -13,7 +13,7 @@ This application provides a interface for querying a pdf file smartly .It perfor
 
 ## Setup
 
-Ensure you have latest version of python installed.
+Ensure you have latest version of python installed (python=3.9.19).
 
 1. Install all the required libraries.
 ```
