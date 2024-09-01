@@ -6,14 +6,13 @@ from langchain.chains.question_answering import load_qa_chain
 import os 
 import torch
 from transformers import T5Tokenizer, T5ForConditionalGeneration,AutoModelForCausalLM,AutoTokenizer,AutoModelForQuestionAnswering, AutoTokenizer, pipeline
-from extractor import extract_text_from_pdf_images
+from extractor import extract_text_from_pdf
 import re
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 def clean_extracted_text(text):
     cleaned_text = re.sub(r'[_=]+', '', text)
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text) 
-    cleaned_text = re.sub(r'\n+', ' ', cleaned_text) 
+    cleaned_text = cleaned_text.replace('\n', ' ') 
 
     cleaned_text = re.sub(r'TIN: \d+', '', cleaned_text) 
     cleaned_text = re.sub(r'Signature: \s+', '', cleaned_text) 
@@ -34,13 +33,13 @@ def main():
 
     if st.button("Process PDF") and pdf_docs:
         try:
-            text = extract_text_from_pdf_images(pdf_docs)
+            text = extract_text_from_pdf(pdf_docs)
         except Exception as e:
             st.error(f"Error processing PDF: {e}")
             return
         
         text_splitter = CharacterTextSplitter(
-            separator="\n",  
+            separator=" ",  
             chunk_size=500,
             chunk_overlap=200,
             length_function=len
