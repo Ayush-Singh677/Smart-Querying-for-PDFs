@@ -66,26 +66,44 @@ The chat history is displayed with a clear distinction between user messages and
 ## Setup
 
 python=3.9.19
-
-1. Install all the required libraries.
+1. Clone the respository 
+```
+git clone https://github.com/Ayush-Singh677/Smart-Querying-for-PDFs.git
+```
+2. Enter into the repo directory
+```
+cd Smart-Querying-for-PDFs
+```
+3. Create a virtual environment
+```
+python -m venv chat
+```
+4. Activate the envirnment for Windows
+```
+.\chat\Scripts\activate
+```
+5. Activate the envirnment for Windows
+```
+source chat/bin/activate
+```
+6. Install all the required libraries.
 ```
 pip install -r requirements.txt
 ```
 
-2. Download all the required models.
+7. Download all the required models.
 ```
 python3 download_models.py
 ```
-
-3. Run the streamlit app.
+8. Run the streamlit app.
 ```
 streamlit run app.py
 ```
-4. Upload the pdf file and ask your question.
+9. Upload the pdf file and ask your question.
 
 
    ![alt text](assets/frontend.png)
-5. After uploading uploading the document click on process pdf, it might take a minute or two to generate the embeddings for the chunks. Following this the embeddings will be stored in the session state and it would not require you to process document for the current session again and again. Then type the questions in the text bar and click ask questions.
+10. After uploading uploading the document click on process pdf, it might take a minute or two to generate the embeddings for the chunks. Following this the embeddings will be stored in the session state and it would not require you to process document for the current session again and again. Then type the questions in the text bar and click ask questions.
 ## Resources 
 ```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/> <br>
 ```sentence-transformers/all-mpnet-base-v2``` - <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">Hugging Face<a/>
