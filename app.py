@@ -6,7 +6,6 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from extractor import extract_text_from_pdf
 import re
 
-# Clean extracted text function
 def clean_extracted_text(text):
     cleaned_text = re.sub(r'[_=]+', '', text)
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
@@ -17,19 +16,17 @@ def clean_extracted_text(text):
     cleaned_text = cleaned_text.strip()
     return cleaned_text
 
-# Main function
 def main():
     st.set_page_config(page_title="Smart Querying for PDFs")
     st.header("Smart Querying for PDFs")
 
-    # Initialize chat history
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = []
 
-    # Sidebar for PDF upload
     st.sidebar.header("Upload your PDF file")
     uploaded_pdf = st.sidebar.file_uploader("Drag and drop file here", type="pdf", accept_multiple_files=False)
-
+    
+    responses = []
     if uploaded_pdf and st.sidebar.button("Process PDF"):
         with st.spinner("PDF is processing..."):
             try:
@@ -56,39 +53,70 @@ def main():
     user_question = st.text_input("Ask a question about the PDF: ")
     if st.button("Ask Question") and user_question and "knowledge_base" in st.session_state:
         
-        # Display chat history with "Searching..." message
-        st.session_state.chat_history.append({"sender": "user", "message": user_question})
+        responses = []
+        responses.append({"sender": "user", "message": user_question})
 
         with st.spinner("Searching..."):
-            docs = st.session_state.knowledge_base.similarity_search(user_question, k=3)
+            docs_with_scores = st.session_state.knowledge_base.similarity_search_with_score(user_question, k=3)
             context = ""
-            for doc in docs:
-                context += str(doc)[13:]
 
-            context = clean_extracted_text(context)
+            threshold = 1.5  
+            found_match = False
 
-            input_text = f"""
+            for doc, score in docs_with_scores:
+                if score <= threshold:
+                    context += str(doc)[13:]
+                    found_match = True
+
+            if not found_match:
+                answer = "No match found for your query in the document. Please be more specific."
+                st.session_state.chat_history.append({"sender": "bot", "message": answer})
+
+            else:
+                context = clean_extracted_text(context)
+
+                input_text = f"""
                             question: {user_question},
                             context : {context},
                           """
 
-            model_name = "t5-large" 
-            tokenizer = T5Tokenizer.from_pretrained(model_name)
-            model = T5ForConditionalGeneration.from_pretrained(model_name)
-            inputs = tokenizer.encode(input_text, return_tensors="pt", max_length=512, truncation=True)
-            outputs = model.generate(inputs, max_length=500, num_beams=4, early_stopping=True)
-            answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
+                model_name = "t5-large" 
+                tokenizer = T5Tokenizer.from_pretrained(model_name)
+                model = T5ForConditionalGeneration.from_pretrained(model_name)
+                inputs = tokenizer.encode(input_text, return_tensors="pt", max_length=512, truncation=True)
+                outputs = model.generate(inputs, max_length=500, num_beams=4, early_stopping=True)
+                answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-            # Add bot's answer to chat history
-            st.session_state.chat_history.append({"sender": "bot", "message": answer})
-
-    # Display chat history
+                responses.append({"sender": "bot", "message": answer})
+    
+    responses = reversed(responses)
+    for response in responses:
+        st.session_state.chat_history.append(response)
     if st.session_state.chat_history:
-        for entry in st.session_state.chat_history:
+        for entry in reversed(st.session_state.chat_history):
             if entry["sender"] == "user":
-                st.markdown(f"<div style='text-align: right; margin: 5px;'>{entry['message']} 👨</div>", unsafe_allow_html=True)
+                st.markdown(
+                    f"""
+                    <div style='display: flex; justify-content: flex-end; margin: 5px;'>
+                        <div style='background-color: #007AFF; border-radius: 5px; padding: 10px; max-width: max-content; color: white;'>
+                            {entry['message']} 👨
+                        </div>
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
             else:
-                st.markdown(f"<div style='text-align: left; margin: 5px;'>🤖 {entry['message']}</div>", unsafe_allow_html=True)
+                st.markdown(
+                    f"""
+                    <div style='display: flex; justify-content: flex-start; margin: 5px;'>
+                        <div style='background-color: #3A3A3A; border-radius: 5px; padding: 10px; max-width: max-content; color: white;'>
+                            🤖 {entry['message']}
+                        </div>
+                    </div>
+                    """, 
+                    unsafe_allow_html=True
+                )
+
 
 if __name__ == '__main__':
     main()
