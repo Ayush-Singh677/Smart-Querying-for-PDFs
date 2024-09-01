@@ -73,7 +73,6 @@ The chat history is displayed with a clear distinction between user messages and
 
 ## Setup
 
-python=3.9.19
 1. Clone the respository 
 ```
 git clone https://github.com/Ayush-Singh677/Smart-Querying-for-PDFs.git
@@ -101,7 +100,11 @@ pip install -r requirements.txt
 
 7. Download all the required models.
 ```
-python3 download_models.py
+python download_models.py 
+```
+or
+```
+python3 download_models.py 
 ```
 8. Run the streamlit app.
 ```
