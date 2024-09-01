@@ -80,6 +80,7 @@ streamlit run app.py
 
 
    ![alt text](assets/frontend.png)
+5. After uploading uploading the document, it might take a minute or two to generate the embeddings for the chunks. Following this the embeddings will be stored in the session state and it would not require you to process document for the current session.
 ## Resources 
 ```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/> <br>
 ```sentence-transformers/all-mpnet-base-v2``` - <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">Hugging Face<a/>
