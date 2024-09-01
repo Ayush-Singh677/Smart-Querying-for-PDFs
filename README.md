@@ -16,11 +16,13 @@ First, we take the PDF file and convert each of its pages into images. This is d
 Once we have the images of the PDF pages, the next step is to preprocess these images to make it easier for OCR to accurately recognize the text. 
 We apply a technique called thresholding. This technique transforms the image into a binary image where the text appears in high contrast against the background. This makes the text more distinct and easier for OCR to detect. 
 
- T(x, y) =
-\begin{cases}
+$$
+T(x, y) = 
+\begin{cases} 
 255 & \text{if } I(x, y) \geq T \\
 0 & \text{if } I(x, y) < T
-\end{cases} 
+\end{cases}
+$$
 
 4.	Perform Optical Character Recognition (OCR):
 With the preprocessed images ready, we use OCR technology to read and extract the text from each image. OCR works by analyzing the patterns in the image and converting them into readable text. The OCR engine examines the binary image and identifies characters and words.
