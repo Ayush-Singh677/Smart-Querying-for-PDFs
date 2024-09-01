@@ -16,9 +16,9 @@ The first step involves converting each page of the PDF into an image. PDFs are 
 Once we have the images, the next step is to preprocess them to improve OCR accuracy. This involves applying binarization, a technique that converts the image into a high-contrast binary format. This makes the text stand out against the background, enhancing OCR performance. The binarization is done using the following mathematical function:
 
 $$
-T(x, y) =
-\begin{cases}
-255 & \text{if } I(x, y) \geq T \
+T(x, y) = 
+\begin{cases} 
+255 & \text{if } I(x, y) \geq T \\
 0 & \text{if } I(x, y) < T
 \end{cases}
 $$
