@@ -29,13 +29,27 @@ With the preprocessed images ready, we use OCR technology to read and extract th
 5.	Combine Text from All Pages:
 After extracting text from each image, we compile the text from all pages into a single cohesive text. This means that if the PDF has multiple pages, the text extracted from each page is collected and combined into one large text block, maintaining the content and flow of the original document.
 
-### Processing the text 
+### 2. Processing the text 
 1. First, we need to handle the text by dividing it into smaller, more manageable pieces. This helps in processing the text efficiently because working with huge blocks of text can be cumbersome. We split the text into chunks, making sure each piece is not too large—about 500 characters is a good size. We also make sure that there’s a bit of overlap between consecutive chunks, about 200 characters, to ensure that no important context is lost between chunks.
 2. Once the text is divided into chunks, we convert these chunks into numerical representations known as embeddings. This process is like translating the text into a language that a computer can understand. Each chunk is turned into a vector, which is essentially a list of numbers that capture the meaning of the text. This translation is done using a pre-trained model that understands the semantics of the text. We use a pre-trained model from the HuggingFaceEmbeddings library. This model (sentence-transformers/all-mpnet-base-v2) converts each text chunk into a vector in a high-dimensional space, where similar meanings are represented by similar vectors.
 3. After we have these numerical representations, we need to store them in a way that allows us to quickly retrieve and compare them. We use a specialized library called FAISS for this. FAISS is great for handling and searching through large amounts of these numerical vectors efficiently.
 4. Finally, we keep track of all this processed information by storing it in the session state of our application. This way, when users ask questions or perform searches, we can quickly use the preprocessed data to find the most relevant information without having to go through the whole process again.
 
-
+### 3. Question Answering 
+1.	Capturing the User’s Question:
+When the user clicks the “Ask Question” button, the system first checks if there is a question entered and if the knowledge base has been initialized. If these conditions are met, the user’s question is added to the chat history, which keeps track of the conversation.
+2.	Processing the Query:
+A loading spinner is displayed to indicate that the system is processing the request. The system then searches the knowledge base for relevant information using the user’s question. The knowledge base contains chunks of text previously extracted from PDFs and stored in a vectorized format, allowing for quick similarity searches.
+3.	Finding Relevant Documents:
+The system retrieves the top 3 most relevant documents from the knowledge base that are similar to the user’s question. These documents are then concatenated to form a context that will be used to generate an answer.
+4.	Cleaning and Preparing the Context:
+The context from the retrieved documents is cleaned to remove any unnecessary or irrelevant text. This cleaned context is then combined with the user’s question to form the input for the answer generation model.
+5.	Generating an Answer:
+The cleaned context and the user’s question are fed into a pre-trained model to generate an answer. The model used here is “T5-large,” which is a transformer-based model capable of understanding and generating human-like text. The model processes the input text and produces an answer based on the context and the question.
+6.	Updating the Chat History:
+The generated answer is added to the chat history, indicating that it was produced by the system. This allows users to see the interaction between their queries and the bot’s responses.
+7.	Displaying the Conversation:
+Finally, the chat history is displayed to the user. The chat history is formatted to distinguish between messages sent by the user and responses from the bot. User messages are aligned to the right, and bot responses are aligned to the left, creating a clear and readable conversation flow.
 
 ## Setup
 
