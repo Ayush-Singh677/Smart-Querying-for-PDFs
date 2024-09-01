@@ -59,9 +59,9 @@ The generated answer is added to the chat history, reflecting the interaction be
 The chat history is displayed with a clear distinction between user messages and bot responses. User messages are aligned to the right, and bot responses are aligned to the left, ensuring a readable and organized conversation.
 
 ### 4. Threshold-based Similarity Filtering
-When a user asks a question, the system searches through the stored knowledge to find chunks of text that are similar to the question. The similarity_search_with_score function not only retrieves these chunks but also provides a similarity score for each one. This score represents how closely each chunk matches the user’s question.
+1. When a user asks a question, the system searches through the stored knowledge to find chunks of text that are similar to the question. The similarity_search_with_score function not only retrieves these chunks but also provides a similarity score for each one. This score represents how closely each chunk matches the user’s question.
 
-In this process, the system loops through the retrieved chunks and checks their scores against a pre-defined threshold . If a chunk’s score meets this threshold, it’s considered relevant and added to the context variable. If none of the chunks have scores above the threshold, the system concludes that there’s “No match” for the query.
+2. In this process, the system loops through the retrieved chunks and checks their scores against a pre-defined threshold . If a chunk’s score meets this threshold, it’s considered relevant and added to the context variable. If none of the chunks have scores above the threshold, the system concludes that there’s “No match” for the query.
 
 ## Setup
 
