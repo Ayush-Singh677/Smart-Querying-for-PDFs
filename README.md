@@ -113,7 +113,7 @@ streamlit run app.py
 9. Upload the pdf file and ask your question.
 
 
-   ![alt text](assets/frontend.png)
+   ![alt text](assets/new.png)
 10. After uploading uploading the document click on process pdf, it might take a minute or two to generate the embeddings for the chunks. Following this the embeddings will be stored in the session state and it would not require you to process document for the current session again and again. Then type the questions in the text bar and click ask questions.
 ## Resources 
 ```google-t5/t5-large``` - <a href="https://huggingface.co/google-t5/t5-large">Hugging Face<a/> <br>
