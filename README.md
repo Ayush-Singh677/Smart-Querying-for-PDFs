@@ -24,6 +24,7 @@ T(x, y) =
 $$
 
 Here,  T(x, y)  represents the thresholded pixel value,  I(x, y)  is the original pixel value, and  T  is the threshold value.
+
 4.	Perform Optical Character Recognition (OCR):
 With the preprocessed binary images, OCR technology is used to recognize and extract text. OCR analyzes the patterns in the image to identify characters and words, converting them into readable text.
 5.	Combine Text from All Pages:
