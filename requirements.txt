@@ -16,7 +16,7 @@ pytesseract==0.3.13
 regex==2024.5.15
 requests==2.32.3
 safetensors==0.4.3
-sentence-transformers==2.2.2
+sentence-transformers
 sentencepiece==0.2.0
 streamlit==1.36.0
 tokenizers==0.19.1
