@@ -49,9 +49,11 @@ When the user submits a question, it is first checked to ensure that the questio
 A loading spinner indicates that the system is processing the request. The user’s question is used to search the knowledge base for relevant information. The knowledge base contains embeddings of text chunks extracted from the PDF, enabling quick similarity searches.
 3.	**Finding Relevant Documents:** 
 The system retrieves the top 3 documents from the knowledge base that are most similar to the user’s question using L2 distance. These documents are concatenated to form a context that provides relevant information for answering the question.
+
 $$
 d(P, Q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^2}
 $$
+
 5.	**Cleaning and Preparing the Context:**
 The context obtained from the retrieved documents is cleaned to remove irrelevant text. The cleaned context is combined with the user’s question to create a coherent input for the answer generation model.
 6.	**Generating an Answer:**
