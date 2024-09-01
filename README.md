@@ -14,6 +14,7 @@ This application provides a interface for querying a pdf file smartly .It perfor
 The first step involves converting each page of the PDF into an image. PDFs are often composed of scanned images, so converting them into images allows us to use Optical Character Recognition (OCR) to extract the text. Each page of the PDF is read and transformed into a separate image for further processing.
 2.	Prepare Images for Text Extraction:
 Once we have the images, the next step is to preprocess them to improve OCR accuracy. This involves applying binarization, a technique that converts the image into a high-contrast binary format. This makes the text stand out against the background, enhancing OCR performance. The binarization is done using the following mathematical function:
+
 $$
 T(x, y) =
 \begin{cases}
@@ -21,10 +22,11 @@ T(x, y) =
 0 & \text{if } I(x, y) < T
 \end{cases}
 $$
+
 Here,  T(x, y)  represents the thresholded pixel value,  I(x, y)  is the original pixel value, and  T  is the threshold value.
-3.	Perform Optical Character Recognition (OCR):
+4.	Perform Optical Character Recognition (OCR):
 With the preprocessed binary images, OCR technology is used to recognize and extract text. OCR analyzes the patterns in the image to identify characters and words, converting them into readable text.
-4.	Combine Text from All Pages:
+5.	Combine Text from All Pages:
 After extracting text from each image, the text from all pages is compiled into a single block of text. This ensures that all content from the PDF is captured and preserved in the correct sequence.
 
 ### 2. Processing the Text
