@@ -22,3 +22,4 @@ streamlit==1.36.0
 tokenizers==0.19.1
 transformers==4.42.3
 pdf2image
+opencv-python
